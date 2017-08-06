@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: login-server
+  cloud:
+    config: 
+      uri: http://localhost:8080/
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+logging:
+  level:
+    org.springframework.web: ERROR
+    au.com.itgeeks: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: /var//application.log

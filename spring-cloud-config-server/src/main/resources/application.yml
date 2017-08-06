@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: configuration-server	
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/spring-cloud-samples/config-repo
+          clone-on-start : true
+security :
+  basic :
+    enabled : false
+management :
+  security :
+    enabled : false
