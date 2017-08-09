@@ -81,6 +81,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.2.3</version>
 				<configuration>
+					<!-- <imageTags> <imageTag>${project.version}</imageTag> </imageTags> -->
 					<imageName>bobs007/${project.artifactId}</imageName>
 					<baseImage>cantara/alpine-zulu-jdk8</baseImage>
 					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
@@ -91,9 +92,6 @@
 					<exposes>
 						<expose>8080</expose>
 					</exposes>
-					<imageTags>
-						<imageTag>${project.version}</imageTag>
-					</imageTags>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -110,13 +108,18 @@
 							<goal>build</goal>
 						</goals>
 					</execution>
-					<execution>
-						<id>docker:start</id>
+					<!-- <execution>
+						<id>tag-image-version</id>
 						<phase>install</phase>
 						<goals>
-							<goal>start</goal>
+							<goal>tag</goal>
 						</goals>
-					</execution>
+						<configuration>
+							<image>bobs007/${project.artifactId}</image>
+							<newName>bobs007/${project.artifactId}:${project.version}</newName>
+							<pushImage>true</pushImage>
+						</configuration>
+					</execution> -->
 				</executions>
 			</plugin>
 		</plugins>
