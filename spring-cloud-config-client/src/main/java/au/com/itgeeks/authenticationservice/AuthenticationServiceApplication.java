@@ -1,21 +1,22 @@
-package au.com.itgeeks.loginservice;
+package au.com.itgeeks.authenticationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
+/**
+ * Entry for Authentication Service
+ * 
+ * @author Boby Thekkanath
+ *
+ */
 @SpringBootApplication
-@RestController
-public class UsernamePassword {
-  
-  @RequestMapping("/")
-  public String home() {
-      return "Hello World!";
-  }
+public class AuthenticationServiceApplication extends SpringBootServletInitializer {
+
 
   public static void main(final String[] args) {
-    SpringApplication.run(UsernamePassword.class, args);
+    SpringApplication.run(AuthenticationServiceApplication.class, args);
   }
 }
+

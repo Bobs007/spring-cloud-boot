@@ -1,1 +1,1 @@
-# spring-cloud-boot
+# Spring Cloud Configuration

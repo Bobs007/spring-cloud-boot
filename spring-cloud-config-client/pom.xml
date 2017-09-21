@@ -10,12 +10,11 @@
 	</parent>
 
 	<groupId>au.com.itgeeks.loginservice</groupId>
-	<artifactId>login-services</artifactId>
-	<version>1.0</version>
+	<artifactId>spring-cloud-config-client</artifactId>
 	<packaging>jar</packaging>
 
-	<name>login_services</name>
-	<description>login service</description>
+	<name>spring-cloud-config-client</name>
+	<description>spring cloud config client</description>
 
 	<dependencies>
 		<dependency>
